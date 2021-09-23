@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a,b,chet,count,max,p;
+    cin>>a>>b;
+    chet=0;
+    for(a;a<=b;a++){
+        if (a%33==0 && (a%2==1 or a%2==-1)){
+            count=0;
+            if (a>=0){
+                p=a;
+            }
+            else if (a<0){
+                p=-a;
+            }
+            while (p>=2){
+                if (p%2==0){
+                    count=count+1;
+                }
+                p=p/2;
+            }
+            if (count==5){
+                chet=chet+1;
+                max=a;
+            }
+        }
+    }
+    cout<<chet<<" "<<max;
+    return 0;
+}
